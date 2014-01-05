@@ -4,6 +4,8 @@
 
 package infinity.resource.graphics;
 
+import infinity.util.FileCI;
+
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
@@ -103,7 +105,7 @@ public class ColorConvert
   {
     Dimension d = new Dimension();
     try {
-      ImageInputStream iis = ImageIO.createImageInputStream(new File(fileName));
+      ImageInputStream iis = ImageIO.createImageInputStream(new FileCI(fileName));
       final Iterator<ImageReader> readers = ImageIO.getImageReaders(iis);
       if (readers.hasNext()) {
         ImageReader reader = readers.next();
